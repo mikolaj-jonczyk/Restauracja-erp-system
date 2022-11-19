@@ -4,4 +4,4 @@
 
 Wybrane moduły systemu ERP restauracji
 
-Projekt ma na celu utworzenie trzech wybranych modułów systemu ERP dla restauracji.
+Projekt ma na celu utworzenie trzech wybranych modułów systemu ERP dla restauracji
