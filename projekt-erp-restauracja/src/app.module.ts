@@ -13,10 +13,12 @@ import { WorkModule } from './work/work.module';
 import { WarehouseModule } from './warehouse/warehouse.module';
 import { UsersModule } from './users/users.module';
 import { DeliveryModule } from './delivery/delivery.module';
+import { HelpersModule } from './helpers/helpers.module';
+import { WorkMapper } from './work/work.mapper';
 
 @Module({
-  imports: [WorkModule, WarehouseModule, UsersModule, DeliveryModule],
+  imports: [WorkModule, WarehouseModule, UsersModule, DeliveryModule, HelpersModule],
   controllers: [AppController, UsersController, WarehouseController, WorkController, DeliveryController],
-  providers: [AppService, UsersService, WarehouseService, WorkService, DeliveryService],
+  providers: [AppService, UsersService, WarehouseService, WorkService, DeliveryService, WorkMapper],
 })
 export class AppModule {}
