@@ -7,7 +7,6 @@ Projekt ma na celu utworzenie trzech wybranych modułów systemu ERP dla restaur
 Wybrane moduły:
 - moduł użytkownika 
 - moduł magazynu
-- moduł kuchni
 - moduł dostawcy
 - moduł pracy
 
