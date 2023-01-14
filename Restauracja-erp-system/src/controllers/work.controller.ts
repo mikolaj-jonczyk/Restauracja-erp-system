@@ -16,7 +16,6 @@ import { Work } from '../models/tasks/work.entity';
 import { AuthGuard } from '@nestjs/passport';
 
 @Controller('work')
-@UseGuards(AuthGuard())
 export class WorkController {
   constructor(private prescriptionsService: WorkService) {}
 
@@ -26,7 +25,7 @@ export class WorkController {
   }
 
   @Get('/:id')
-  getPrescriptionById(@Param('id') id: string): Promise<Work> {
+  getTaskById(@Param('id') id: string): Promise<Work> {
     return this.prescriptionsService.getTaskById(id);
   }
 
