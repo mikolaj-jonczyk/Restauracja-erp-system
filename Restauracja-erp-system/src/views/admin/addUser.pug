@@ -1,0 +1,20 @@
+extends  adminLayout
+
+block content
+  .login-div
+    h1.login Tworzenie użytkownika
+    p.login Stwórz użytkownika
+    form.login(action="/admin/createUser" method="POST")
+      label(for="username") Nazwa użytkownika
+      input(type="text" name="username")
+      label(for="password") Hasło
+      input(type="password" name="password")
+      label Wybierz typ użytkownika
+      select(name="type")
+        option(value="admin") Admin
+        option(value="chef") Szef kuchni
+        option(value="cook") Kucharz
+        option(value="warehouseboss") Szef magazynu
+        option(value="warehouseman") Magazynier
+        option(value="delivery") Dostawca
+      input(type="submit" value="Stwórz użytkownika")

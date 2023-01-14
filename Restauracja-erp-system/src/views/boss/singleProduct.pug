@@ -1,0 +1,10 @@
+extends  bossLayout
+
+block content 
+  .login-div      
+    h1.login= title
+    h3= single.name
+    h4 Ilość - #{single.quantity}
+    form.login(action=`deleteProduct/${single.id}` method="POST")
+      input(type="submit" value="Usuń produkt")
+    p

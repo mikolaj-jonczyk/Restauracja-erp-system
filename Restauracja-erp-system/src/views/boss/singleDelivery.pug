@@ -1,0 +1,11 @@
+extends  bossLayout
+
+block content 
+  .login-div      
+    h1.login= title
+    h3= single.id
+    h4 Data stworzenia - #{single.dateOfCreate}
+    h4 Lista produktów - #{single.productList}
+    form.login(action=`deleteDelivery/${single.id}` method="POST")
+      input(type="submit" value="Usuń dostawę")
+    p

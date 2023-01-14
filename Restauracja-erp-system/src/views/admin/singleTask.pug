@@ -1,0 +1,12 @@
+extends  adminLayout
+
+block content 
+  .login-div      
+    h1.login= title
+    h3 #{single.title}
+    h4 Opis - #{single.description}
+    h4 Status - #{single.status}
+    h4 Osoba przypisana - #{single.userId}
+    form.login(action=`deleteTask/${single.id}` method="POST")
+      input(type="submit" value="Usuń zadanie")
+    p

@@ -1,0 +1,16 @@
+extends  adminLayout
+
+
+block content
+  .login-div
+    .inner 
+        h1 Wszyscy uzytkownicy
+        table#customers
+          tr 
+            th Nazwa użytkownika
+            th Typ 
+          each user in users
+            tr 
+              td #{user.username}          
+              td #{user.type}
+

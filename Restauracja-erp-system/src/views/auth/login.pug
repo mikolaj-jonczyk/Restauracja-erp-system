@@ -1,0 +1,13 @@
+extends  ../layout
+
+block content
+  .login-div
+    img.main-image(src='/images/restaurant.png')
+    h1.login Witaj na portalu erp restauracji 
+    p.login Zaloguj się
+    form.login(action="/signin" method="POST")
+      label(for="username") Nazwa użytkownika
+      input(type="text" name="username")
+      label(for="password") Hasło
+      input(type="password" name="password")
+      input(type="submit" value="Zaloguj")

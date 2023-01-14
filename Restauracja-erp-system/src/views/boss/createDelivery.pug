@@ -1,0 +1,12 @@
+extends  bossLayout
+
+block content
+  .login-div
+    h1.login Tworzenie dostawy
+    p.login Stwórz dostawę
+    form.login(action="/boss/createDelivery" method="POST")
+      label(for="dateOfCreate") Data stworzenia
+      input(type="text" name="dateOfCreate")
+      label(for="productList") Lista produktów
+      input(type="text" name="productList")
+      input(type="submit" value="Stwórz dostawę")

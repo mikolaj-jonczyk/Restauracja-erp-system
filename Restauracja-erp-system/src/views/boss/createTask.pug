@@ -1,0 +1,14 @@
+extends  bossLayout
+
+block content
+  .login-div
+    h1.login Tworzenie zadania
+    p.login Stwórz zadanie
+    form.login(action="/boss/createTask" method="POST")
+      label(for="description") Opis
+      input(type="text" name="description")
+      label(for="executionTime") Czas wykonania
+      input(type="text" name="executionTime")
+      label(for="userId") Przypisz użytkownika
+      input(type="text" name="userId")
+      input(type="submit" value="Stwórz zadanie")
