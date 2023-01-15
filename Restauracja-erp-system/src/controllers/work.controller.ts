@@ -6,17 +6,14 @@ import {
   Param,
   Patch,
   Post,
-  Query,
-  UseGuards
+  Query
 } from '@nestjs/common';
 import { WorkService } from '../services/work.service';
 import { CrateTaskDto } from '../models/tasks/dto/create-task.dto';
 import { GetTasksFilterDto } from '../models/tasks/dto/get-tasks-filter.dto';
 import { Work } from '../models/tasks/work.entity';
-import { AuthGuard } from '@nestjs/passport';
 
 @Controller('work')
-@UseGuards(AuthGuard())
 export class WorkController {
   constructor(private workService: WorkService) {}
 
@@ -26,7 +23,7 @@ export class WorkController {
   }
 
   @Get('/:id')
-  getPrescriptionById(@Param('id') id: string): Promise<Work> {
+  getTaskById(@Param('id') id: string): Promise<Work> {
     return this.workService.getTaskById(id);
   }
 
