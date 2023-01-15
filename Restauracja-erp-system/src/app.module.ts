@@ -34,6 +34,6 @@ import { WorkerModule } from './modules/worker.module';
     WorkerModule
   ],
   providers: [],
-  controllers: [WorkerController]
+  controllers: []
 })
 export class AppModule {}

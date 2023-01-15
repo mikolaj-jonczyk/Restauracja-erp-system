@@ -1,0 +1,21 @@
+extends workerLayout
+
+
+block content 
+  .login-div
+    .inner 
+        h2 Wszystkie zadania
+        table#customers
+          tr 
+            th Id
+            th Opis
+            th Czas wykonania
+            th Status
+          each task in tasks
+            tr 
+              td 
+                a(href=`singleTask/${task.id}`) #{task.id}
+              td #{task.description}
+              td #{task.executionTime}
+              td #{task.status}
+

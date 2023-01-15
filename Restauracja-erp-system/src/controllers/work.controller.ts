@@ -18,32 +18,32 @@ import { AuthGuard } from '@nestjs/passport';
 @Controller('work')
 @UseGuards(AuthGuard())
 export class WorkController {
-  constructor(private prescriptionsService: WorkService) {}
+  constructor(private workService: WorkService) {}
 
   @Get()
   getPrescriptions(@Query() filterDto: GetTasksFilterDto): Promise<Work[]> {
-    return this.prescriptionsService.getTasks(filterDto);
+    return this.workService.getTasks(filterDto);
   }
 
   @Get('/:id')
   getPrescriptionById(@Param('id') id: string): Promise<Work> {
-    return this.prescriptionsService.getTaskById(id);
+    return this.workService.getTaskById(id);
   }
 
   @Delete('/:id')
   deletePrescriptionById(@Param('id') id: string): Promise<void> {
-    return this.prescriptionsService.deleteTask(id);
+    return this.workService.deleteTask(id);
   }
 
   @Post()
   createPrescription(
     @Body() createPrescriptionDto: CrateTaskDto
   ): Promise<Work> {
-    return this.prescriptionsService.createTask(createPrescriptionDto);
+    return this.workService.createTask(createPrescriptionDto);
   }
 
   @Patch('/:id/status')
   updatePrescriptionStatus(@Param('id') id: string): Promise<Work> {
-    return this.prescriptionsService.updateTaskStatus(id);
+    return this.workService.updateTaskStatus(id);
   }
 }

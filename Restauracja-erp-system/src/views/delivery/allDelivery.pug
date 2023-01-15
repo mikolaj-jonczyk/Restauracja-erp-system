@@ -1,0 +1,20 @@
+extends  deliveryLayout
+
+
+block content 
+  .login-div
+    .inner 
+        h2 Wszystkie dostawy
+        table#customers
+          tr 
+            th Id
+            th Lista produktów
+            th Data 
+            th Status
+          each del in delivery
+            tr 
+              td 
+                a(href=`singleDelivery/${del.id}`) #{del.id}
+              td #{del.productList}
+              td #{del.dateOfCreate}
+              td #{del.status}
